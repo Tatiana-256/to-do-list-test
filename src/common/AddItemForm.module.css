@@ -1,0 +1,6 @@
+.inputStyle{
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    margin-top: 20px;
+}
