@@ -2,7 +2,7 @@ import React, {useCallback, useEffect, useReducer, useState} from 'react'
 import './App.css'
 import {Todolist} from './components/Todolist'
 import {AppBar, Container, Grid, Paper, Toolbar, Typography} from '@material-ui/core'
-import {Comments} from './components/Comments'
+import {Comments} from './components/TaskComments'
 import {
     addCommentAC,
     addTaskAC,

@@ -16,7 +16,7 @@ type PropsType = {
     addComment: (taskId: string, commentText: string, color?: string) => void
 }
 
-export const Comments = React.memo(function(props: PropsType) {
+export const Comments = React.memo(function (props: PropsType) {
     let [flag, setFlag] = useState(false);
 
     const addComment = useCallback((title: string, color?: string) => {
@@ -33,7 +33,7 @@ export const Comments = React.memo(function(props: PropsType) {
 
         {props.comments ?
             props.comments.map(comment => {
-                    return <div style={{padding: '10px'}}>
+                    return <div style={{padding: '10px'}} key={comment.commentId}>
                         <div className={styles.comment}>
                             <div
                                 onClick={flagHandler}

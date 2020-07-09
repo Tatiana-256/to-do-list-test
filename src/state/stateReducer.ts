@@ -33,7 +33,7 @@ export const stateReducer = (state: AppStateType, action: ActionsType): AppState
                 ...state,
                 selectedTaskId: state.selectedTaskId === action.id ? null : state.selectedTaskId,
                 comments: commentsCopy,
-                tasks: state.tasks.filter(t => t.id != action.id)
+                tasks: state.tasks.filter(t => t.id !== action.id)
             }
         case 'TODOLIST/STATE/ADD-TASK':
             const taskId = v1()
@@ -42,7 +42,7 @@ export const stateReducer = (state: AppStateType, action: ActionsType): AppState
                 comments: {...state.comments, [taskId]: []},
                 tasks: [
                     ...state.tasks,
-                    {id: taskId, title: action.title, isDone: false}
+                    {id: taskId, title: action.title}
                 ]
             }
         case 'TODOLIST/STATE/ADD-COMMENT':

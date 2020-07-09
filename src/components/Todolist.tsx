@@ -30,7 +30,7 @@ export const Todolist = React.memo(function (props: PropsType) {
                     }
 
                     let commentsForTask = props.comments[t.id]
-                    return <div className={styles.inputStyle}>
+                    return <div className={styles.inputStyle} key={t.id}>
                         <span>{t.title}</span>
                         {
                             commentsForTask ?
